@@ -38,4 +38,6 @@ teamone-shoot-button.addEventListener("click", function() {
     // make it print in goals in increments
     // refer to prvious activity to figure this out
     //use console.log for testing
+    // will need this function for both numshots and numgoals
+    //unfuck thyself
 })
