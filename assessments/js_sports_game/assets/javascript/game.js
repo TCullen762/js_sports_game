@@ -28,16 +28,41 @@
    // countspan.innerHTML= count += 1
 //})
 
-let teamOne = 0;
-const teamOneShots = document.querySelector("#teamone-numshots")
-const teamOneGoals = document.querySelector("#teamone-numgoals")
-teamone-shoot-button.addEventListener("click", function() {
-    //build function here that uses math.random to find a random number
-    //make it from 1-10 and use this number to build conditional logic
-    // make it print in shots taken in increments
-    // make it print in goals in increments
-    // refer to prvious activity to figure this out
-    //use console.log for testing
-    // will need this function for both numshots and numgoals
-    //unfuck thyself
+//TODO: 
+//1. Set variables - Done
+//2. get clicker to work -Done
+//3. add conditional logic using math.random to evaluate and tally goals
+//3 (continued)possibly by setting abother variable for goals and using inner HTML
+
+
+let teamOne = 0
+
+const teamOneShots = document.querySelector("#teamone-numshots") //selects the node?
+const teamOneShots_button = document.querySelector("#teamone-shoot-button")//selects button
+teamOneShots_button.addEventListener("click", function() {//adds functionality to the button and makes something happen
+    console.log("shot counter works")//test
+ 
+   teamOneShots.innerHTML = teamOne += 1
+
+    
+
 })
+
+//Begin Conditional logic 
+//1. set variables
+//2. begin if else statements math.random
+//3. sort out inner HTML
+
+let teamOneGoal = 0
+
+
+const teamOneGoalTally = document.querySelector("#teamone-numgoals")//selects node?
+teamOneShots_button.addEventListener("click", function(){
+   console.log("goal tally works, needs Math.Random")//test
+  
+   if((Math.floor(Math.random()*10)+1) <=5){
+   teamOneGoalTally.innerHTML=teamOneGoal += 1
+   }
+   
+})
+
