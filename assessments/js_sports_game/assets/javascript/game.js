@@ -35,14 +35,31 @@
 //3 (continued)possibly by setting abother variable for goals and using inner HTML
 
 
+let resets =0
+
+const numResets = document.querySelector("#num-resets")//secets node
+const numResets_button =document.querySelector("#reset-button")//selects button
+numResets_button.addEventListener("click",function(){
+  
+   teamOneShots.innerHTML = teamOne = 0
+   teamOneGoalTally.innerHTML=teamOneGoal = 0
+   teamTwoShots.innerHTML=teamTwo =0
+   teamTwoGoalTally.innerHTML=teamOneGoal = 0
+
+   numResets.innerHTML = resets += 1
+   
+    console.log("reset button works")//test
+})
+
 let teamOne = 0
 
-const teamOneShots = document.querySelector("#teamone-numshots") //selects the node?
+const teamOneShots = document.querySelector("#teamone-numshots") //selects node
 const teamOneShots_button = document.querySelector("#teamone-shoot-button")//selects button
 teamOneShots_button.addEventListener("click", function() {//adds functionality to the button and makes something happen
-    console.log("shot counter works")//test
+    console.log("Team one shot counter works")//test
  
-   teamOneShots.innerHTML = teamOne += 1
+   teamOneShots.innerHTML = teamOne  += 1
+  
 
     
 
@@ -58,9 +75,9 @@ let teamOneGoal = 0
 
 const teamOneGoalTally = document.querySelector("#teamone-numgoals")//selects node
 teamOneShots_button.addEventListener("click", function(){ //activates conditional logic  and Math.Random sequence when button is clicked.
-   console.log("goal tally works")//test
+   console.log("team one goal tally works")//test
   
-   if((Math.floor(Math.random()*10)+1) <=5){
+   if((Math.floor(Math.random()*10)+1) <=2){
    teamOneGoalTally.innerHTML=teamOneGoal += 1
    }
    
@@ -69,3 +86,27 @@ teamOneShots_button.addEventListener("click", function(){ //activates conditiona
 //TODO:
 //repeat above process for team 2 module
 // figure out the reset button
+
+
+let teamTwo = 0
+
+const teamTwoShots = document.querySelector("#teamtwo-numshots") //selects node
+const teamTwoShots_button = document.querySelector("#teamtwo-shoot-button")//selects button
+teamTwoShots_button.addEventListener("click", function() {//adds functionality to the button and makes something happen
+   console.log("team two shot counter works")
+ 
+   teamTwoShots.innerHTML=teamTwo += 1
+})
+
+let teamTwoGoal = 0
+
+
+const teamTwoGoalTally = document.querySelector("#teamtwo-numgoals")//selects node
+teamTwoShots_button.addEventListener("click", function(){ //activates conditional logic  and Math.Random sequence when button is clicked.
+   console.log("team two goal tally works")//test
+  
+   if((Math.floor(Math.random()*10)+1) <=2){
+   teamTwoGoalTally.innerHTML=teamOneGoal += 1
+   }
+   
+})
