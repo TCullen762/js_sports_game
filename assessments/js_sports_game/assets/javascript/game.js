@@ -49,16 +49,16 @@ teamOneShots_button.addEventListener("click", function() {//adds functionality t
 })
 
 //Begin Conditional logic 
-//1. set variables
-//2. begin if else statements math.random
-//3. sort out inner HTML
+//1. set variables - done 
+//2. begin if else statements math.random - done
+//3. sort out inner HTML - done
 
 let teamOneGoal = 0
 
 
-const teamOneGoalTally = document.querySelector("#teamone-numgoals")//selects node?
-teamOneShots_button.addEventListener("click", function(){
-   console.log("goal tally works, needs Math.Random")//test
+const teamOneGoalTally = document.querySelector("#teamone-numgoals")//selects node
+teamOneShots_button.addEventListener("click", function(){ //activates conditional logic  and Math.Random sequence when button is clicked.
+   console.log("goal tally works")//test
   
    if((Math.floor(Math.random()*10)+1) <=5){
    teamOneGoalTally.innerHTML=teamOneGoal += 1
@@ -66,3 +66,6 @@ teamOneShots_button.addEventListener("click", function(){
    
 })
 
+//TODO:
+//repeat above process for team 2 module
+// figure out the reset button
