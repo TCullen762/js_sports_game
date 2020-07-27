@@ -1,0 +1,21 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.special{
+    color:red;
+
+}
+.notSpecial{
+    color:green;
+}
+button {
+    margin: 0.5rem}
+
+    
+
+    .default {
+        color:dark gray
+    }
